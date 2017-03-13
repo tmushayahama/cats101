@@ -1,4 +1,5 @@
 protected/runtime/*
+node
 nbproject
 
 ### Sass Cache ###

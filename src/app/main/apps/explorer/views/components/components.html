@@ -1,0 +1,67 @@
+<div class="gb-header gb-header-1 md-accent-bg" layout="column" layout-align="space-between center" >
+ <div class="gb-cover-overlap" ></div>
+ <div class="gb-cover" ng-style="$root.headerStyle"></div>
+ <div class="gb-container user-info" layout="column" layout-align="center center">
+  <div class="gb-header-icon">
+   <i class="fa" ng-class="'fa icon-gb-' + $root.appName.toLowerCase()"></i>
+  </div>
+  <div class="gb-title">
+   {{$root.appName}}
+  </div>
+ </div>
+ <div class="actions" layout="row" layout-align="end center">
+  <md-button class="md-raised md-accent" aria-label="Add" translate="explorer.add_text"
+             ng-click="componentsCtrl.openAddComponentDialog($event, null, componentsCtrl.tabs.apps)"
+             translate-attr-aria-label="explorer.add">Add
+  </md-button>
+  <md-button class="md-raised md-primary" translate="explorer.send_request_text"
+             ng-click="componentsCtrl.sendComponentRequest()"
+             translate-attr-aria-label="explorer.send_request_text">Send Request
+  </md-button>
+ </div>
+</div>
+<!-- / HEADER -->
+<!-- CONTENT -->
+<div class="gb-tabs-1" layout="column" layout-align="center center" flex>
+ <div class="gb-tabs-len-4" layout="row" flex>
+  <md-tabs  md-no-pagination md-selected="selectedIndex" md-stretch-tabs="always" class="">
+   <md-tab>
+    <md-tab-label>
+     <div class="gb-tab-button" ui-sref="app.explorer.home">
+      <div class="gb-icon">
+       <i class="fa fa-home"></i>
+      </div>
+      <div class="gb-title">
+       Lobby
+      </div>
+     </div>
+    </md-tab-label>
+   </md-tab>
+   <md-tab ng-disabled="true">
+    <md-tab-label>
+     <div class="gb-tab-button" ui-sref="app.explorer.mentorship">
+      <div class="gb-icon">
+       <i class="fa icon-map"></i>
+      </div>
+      <div class="gb-title">
+       Tours
+      </div>
+     </div>
+    </md-tab-label>
+   </md-tab>
+   <md-tab ng-disabled="true">
+    <md-tab-label>
+     <div class="gb-tab-button" ui-sref="app.explorer.business">
+      <div class="gb-icon">
+       <i class="fa fa-briefcase"></i>
+      </div>
+      <div class="gb-title">
+       For Business
+      </div>
+     </div>
+    </md-tab-label>
+   </md-tab>
+  </md-tabs>
+ </div>
+</div>
+<div  ui-view="tab" class="" layout="column" layout-align="start strecth" flex></div>

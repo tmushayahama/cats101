@@ -4,9 +4,7 @@
 
  angular
          .module('app.toolbar',
-                 [
-                  "app.search"
-                 ])
+                 [])
          .config(config);
 
  /** @ngInject */

@@ -49,10 +49,6 @@
              templateUrl: 'src/app/navigation/navigation.html',
              controller: 'NavigationController as vm'
             },
-            'quickPanel@app': {
-             templateUrl: 'src/app/quick-panel/quick-panel.html',
-             controller: 'QuickPanelController as vm'
-            },
             'loginPanel@app': {
              templateUrl: 'src/app/login-panel/login-panel.html',
              controller: 'LoginPanelController as vm'

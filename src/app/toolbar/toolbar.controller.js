@@ -7,7 +7,7 @@
          .controller('ToolbarController', ToolbarController);
 
  /** @ngInject */
- function ToolbarController(SearchService, $rootScope, $q, $state, $timeout, $mdSidenav, $translate, $mdToast, $auth, localStorageService, msNavigationService)
+ function ToolbarController($rootScope, $q, $state, $timeout, $mdSidenav, $translate, $mdToast, $auth, localStorageService, msNavigationService)
  {
   var vm = this;
 
@@ -182,7 +182,6 @@
    * @returns {Promise}
    */
   function search(query) {
-   return SearchService.suggestionSearch(query);
   }
 
   /**

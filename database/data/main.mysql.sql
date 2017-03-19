@@ -1,9 +1,9 @@
-DROP USER 'gb102'@'localhost';
-CREATE USER 'gb102'@'localhost' IDENTIFIED BY 'goal102++';
-DROP DATABASE IF EXISTS gb102;
-CREATE DATABASE gb102 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
-GRANT ALL PRIVILEGES ON gb102.* to 'gb102'@'localhost' WITH GRANT OPTION;
-USE gb102;
+DROP USER 'ct101'@'localhost';
+CREATE USER 'ct101'@'localhost' IDENTIFIED BY 'goal101++';
+DROP DATABASE IF EXISTS ct101;
+CREATE DATABASE ct101 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+GRANT ALL PRIVILEGES ON ct101.* to 'ct101'@'localhost' WITH GRANT OPTION;
+USE ct101;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -119,7 +119,7 @@ CREATE TABLE `ct_user` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastname` varchar(100) NOT NULL DEFAULT '',
   `firstname` varchar(100) NOT NULL DEFAULT '',
-  `avatar_url` varchar(200) NOT NULL DEFAULT 'gb-avatar.jpg',
+  `avatar_url` varchar(200) NOT NULL DEFAULT 'ct-avatar.jpg',
   `theme_color` varchar(200) NOT NULL DEFAULT 'md-blue-400-bg',
   `gender` varchar(1) DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
@@ -134,7 +134,7 @@ CREATE TABLE `ct_user` (
 
 -- ----------- LEVEL ---------------
 load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/level.txt'
-    into table gb102.ct_level
+    into table ct101.ct_level
     fields terminated by '\t'
     enclosed by '"'
     escaped by '\\'
@@ -144,7 +144,7 @@ load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/level
 
 -- ----------- COMPONENT ---------------
 load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/component.txt'
-    into table gb102.ct_component
+    into table ct101.ct_component
     fields terminated by '\t'
     enclosed by '"'
     escaped by '\\'
@@ -154,8 +154,8 @@ load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/compo
 
 
 -- ------------------ USER ------------------
-load data local infile 'C:/xampp/htdocs/gb102/database/data/initializers/user.txt'
-    into table gb102.ct_user
+load data local infile 'C:/xampp/htdocs/ct101/database/data/initializers/user.txt'
+    into table ct101.ct_user
     fields terminated by '\t'
     enclosed by '"'
     escaped by '\\'

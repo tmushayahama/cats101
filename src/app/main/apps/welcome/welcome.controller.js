@@ -15,12 +15,12 @@
   vm.components = [];
 
   //Method
-  vm.getComponent = getComponent;
+  vm.getComponentByLocation = getComponentByLocation;
 
 
 
-  function getComponent(event) {
-   ComponentService.getComponent(event.pageX, event.pageY).then(function (data) {
+  function getComponentByLocation(event) {
+   ComponentService.getComponentByLocation(event.pageX, event.pageY).then(function (data) {
     vm.component = data;
    });
   }

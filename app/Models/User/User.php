@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
   *
   * @var string
   */
- protected $table = 'gb_user';
+ protected $table = 'ct_user';
  public static $rules = array(
      'firstname' => 'required',
      'lastname' => 'required',

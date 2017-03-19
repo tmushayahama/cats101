@@ -1,1 +1,2 @@
-id	type_id	title	description	location_x	location_y	due	creator_id	component_picture_url_sm	component_picture_url_lg	created_at	updated_at	privacy_id	order	status
+id	type_id	title	description	location_x	location_y	due	creator_id	component_picture_url	created_at	updated_at	privacy_id	order	status
+1	1	cute 1	cutee	12	12		1	1/1/1-sm			0	0	0

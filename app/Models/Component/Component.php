@@ -52,7 +52,7 @@ class Component extends Model {
   *
   * @var string
   */
- protected $table = 'gb_component';
+ protected $table = 'ct_component';
 
  /**
   * The attributes that are mass assignable.
@@ -99,8 +99,8 @@ class Component extends Model {
  public static function getComponentByLocation($x, $y) {
   $howMany = 1;
   $query = Component::orderBy('order', 'desc')
-          ->where('location_x', $x)
-          ->where('location_y', $y)
+          //->where('location_x', $x)
+          //->where('location_y', $y)
           ->with('creator')
           ->with('type')
           ->take(20)

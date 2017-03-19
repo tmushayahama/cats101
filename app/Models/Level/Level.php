@@ -15,7 +15,7 @@ class Level extends Model {
   *
   * @var string
   */
- protected $table = 'gb_level';
+ protected $table = 'ct_level';
 
  /**
   * The attributes that are mass assignable.

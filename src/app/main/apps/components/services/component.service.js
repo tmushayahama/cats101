@@ -48,6 +48,10 @@
    var deferred = $q.defer();
 
    msApi.request('components.componentByLocation@get',
+           {
+            x: x,
+            y: y
+           },
            function (response) {
             deferredHandler(response, deferred);
            },

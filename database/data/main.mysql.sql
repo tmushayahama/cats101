@@ -68,8 +68,7 @@ CREATE TABLE `ct_component` (
   `location_y` int(11) NOT NULL,
   `due` datetime,
   `creator_id` int(11) NOT NULL,
-  `component_picture_url_sm` varchar(1000) NOT NULL DEFAULT "",
-  `component_picture_url_lg` varchar(1000) NOT NULL DEFAULT "",
+  `component_picture_url` varchar(1000) NOT NULL DEFAULT "",
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `privacy_id` int(11) NOT NULL,
@@ -150,11 +149,11 @@ load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/compo
     escaped by '\\'
     lines terminated by '\r\n'
     ignore 1 LINES
-   (`id`,	`parent_component_id`,	`type_id`,	`title`,	`description`,	`due`, `template_type_id`,	`creator_id`,	`component_picture_url`,	`background_color`,	`created_at`,	`updated_at`,	`level_id`,	`privacy_id`,	`order`,	`status`);
+ (`id`,	`type_id`,	`title`,	`description`,	`location_x`,	`location_y`,	`due`,	`creator_id`,	`component_picture_url`,	`created_at`,	`updated_at`,	`privacy_id`,	`order`,	`status`);
 
 
 -- ------------------ USER ------------------
-load data local infile 'C:/xampp/htdocs/ct101/database/data/initializers/user.txt'
+load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/user.txt'
     into table ct101.ct_user
     fields terminated by '\t'
     enclosed by '"'

@@ -10,6 +10,22 @@
  function ComponentService(msApi, $q) {
   var service = {
    data: [],
+   food: [
+    {
+     'name': 'mouse',
+     'animal': 'cat',
+     'total': 10
+    },
+    {
+     'name': 'treat',
+     'animal': 'dog',
+     'total': 10
+    },
+    {
+     'name': 'worm',
+     'animal': 'chicken',
+     'total': 10
+    }],
    getComponentByLocation: getComponentByLocation
   };
 

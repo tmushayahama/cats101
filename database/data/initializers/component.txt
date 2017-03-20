@@ -1,2 +1,5 @@
 id	type_id	title	description	location_x	location_y	due	creator_id	component_picture_url	created_at	updated_at	privacy_id	order	status
-1	1	cute 1	cutee	12	12		1	1/1/1-sm			0	0	0
+1	1	cute 1	cutee	12	12		1	ct-1-1-1-1-sm.jpg			0	0	0
+2	1	cute 2	cutee	12	12		1	ct-1-1-1-2-sm.jpg			0	0	0
+3	1	cute 3	cutee	12	12		1	ct-1-1-1-3-sm.jpg			0	0	0
+4	1	cute 4	cutee	12	12		1	ct-1-1-1-4-sm.jpg			0	0	0

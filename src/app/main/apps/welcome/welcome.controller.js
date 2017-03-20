@@ -12,14 +12,22 @@
   var vm = this;
 
   // Data
-  vm.components = [];
+  vm.component = {};
+  vm.foods = ComponentService.foods;
 
   //Method
   vm.getComponentByLocation = getComponentByLocation;
 
+  init();
 
+  function init() {
+   ComponentService.getComponentByLocation(0, 0).then(function (data) {
+    vm.component = data;
+   });
+  }
 
   function getComponentByLocation(event) {
+   var x = event.PageX;
    ComponentService.getComponentByLocation(event.pageX, event.pageY).then(function (data) {
     vm.component = data;
    });

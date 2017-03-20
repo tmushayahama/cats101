@@ -1,19 +1,13 @@
 <div id="gb-welcome">
  <div class="gb-welcome-section-4" layout="column" layout-align="center center" flex>
-
   <div class="gb-container mb-20" layout="column" layout-align="" flex>
-   <div class="gb-card-heading-1" layout="column" layout-align="center center" flex>
-    <div class="text-center">
-     <h2 class="gb-title">
-      Just Click to place a mouse
-     </h2>
-     <p class="gb-description">
-      Our cute cats will
-     </p>
-    </div>
-   </div>
    <div class="gb-cat-holder" ng-click="vm.getComponentByLocation($event)" layout="column" layout-align="center center" flex>
-    <img ng-src="assets/images/cats/default" alt="">
+    <img ng-src="src/assets/images/cats/{{vm.component.component_picture_url}}" alt="">
+   </div>
+   <div class="">
+    <div class="" ng-repeat="food in vm.foods">
+     <img ng-src="src/assets/images/foods/{{food.picture_url}}" alt="">
+    </div>
    </div>
   </div>
  </div>

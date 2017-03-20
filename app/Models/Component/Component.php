@@ -101,8 +101,8 @@ class Component extends Model {
   $query = Component::orderBy('order', 'desc')
           //->where('location_x', $x)
           //->where('location_y', $y)
-          ->with('creator')
-          ->with('type')
+          //->with('creator')
+          //->with('type')
           ->take(20)
           ->get();
 

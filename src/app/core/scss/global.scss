@@ -98,13 +98,13 @@ body {
  @include position(absolute, 5px null null 50%);
  transform:translateX(-50%);
  width: 400px;
- height: 120px;
+ height: 100px;
  z-index: 3;
  .ct-widget-food-item {
-  height: 100px;
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
+  height: 80px;
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(#FFF, 0.6);

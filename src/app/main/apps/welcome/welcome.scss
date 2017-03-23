@@ -85,6 +85,7 @@ $color-6: #077568;
  background-color: #ECEFF1;
  position: relative;
  padding: 0;
+ overflow: hidden;
  .gb-wall-h {
   height:10px;
  }
@@ -180,7 +181,7 @@ $color-6: #077568;
 }
 
 .gb-welcome-section-4 {
- background: url(../../../src/assets/images/backgrounds/grass-1.jpg);
+ background: url(../../../src/assets/images/backgrounds/grass-2.jpg);
  height: 100%;
  min-height: 100%;
  max-height: 100%;

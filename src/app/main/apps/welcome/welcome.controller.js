@@ -12,26 +12,30 @@
   var vm = this;
 
   // Data
+  vm.components = [];
   vm.component = {};
   vm.foods = ComponentService.foods;
+  vm.currentPage = 0;
 
   //Method
-  vm.getComponentByLocation = getComponentByLocation;
+  vm.getComponent = getComponent;
   vm.chooseFood = chooseFood;
 
   init();
 
   function init() {
-   ComponentService.getComponentByLocation(1, 0, 0).then(function (data) {
-    vm.component = data;
-   });
    chooseFood(vm.foods.options[0]);
+   ComponentService.getComponents(vm.foods.selected.animal, vm.currentPage).then(function (data) {
+    vm.components = data;
+    vm.currentPage++;
+   });
+
   }
 
-  function getComponentByLocation(event) {
+  function getComponent(event) {
    var x = event.pageX;
    var animal = vm.foods.selected.animal;
-   ComponentService.getComponentByLocation(animal, event.pageX, event.pageY).then(function (data) {
+   ComponentService.getComponent(animal).then(function (data) {
     vm.component = data;
     vm.component.pictureStyle = {
      'top': event.pageY - vm.component.location_y,

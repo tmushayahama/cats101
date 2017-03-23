@@ -7,9 +7,9 @@
          .factory('ComponentService', ComponentService);
 
  /** @ngInject */
- function ComponentService(msApi, $q) {
+ function ComponentService(_, msApi, $q) {
   var service = {
-   data: [],
+   components: [],
    foods: {
     options: [
      {
@@ -38,7 +38,8 @@
      }
     ]
    },
-   getComponentByLocation: getComponentByLocation
+   getComponent: getComponent,
+   getComponents: getComponents
   };
 
 
@@ -71,6 +72,32 @@
    *
    * @returns promise of the deferred response
    */
+  function getComponents(animal, page) {
+   // Create a new deferred object
+   var deferred = $q.defer();
+
+   msApi.request('components.components@query',
+           {
+            animal: animal,
+            page: page
+           },
+           function (response) {
+            service.components = response;
+            deferredHandler(response, deferred);
+           },
+           function (response) {
+            deferred.reject(response);
+           }
+   );
+
+   return deferred.promise;
+  }
+
+  /**
+   * Get component data from the server
+   *
+   * @returns promise of the deferred response
+   */
   function getComponentByLocation(animal, x, y) {
    // Create a new deferred object
    var deferred = $q.defer();
@@ -88,6 +115,23 @@
             deferred.reject(response);
            }
    );
+
+   return deferred.promise;
+  }
+
+  /**
+   * Get component from the local components
+   *
+   * @param animal The animal type
+   * @returns promise of the deferred response
+   */
+  function getComponent(animal) {
+   // Create a new deferred object
+   var deferred = $q.defer();
+   var animals = _.filter(service.components, {'type_id': animal});
+   var result = _.sample(animals);
+
+   deferredHandler(result, deferred);
 
    return deferred.promise;
   }

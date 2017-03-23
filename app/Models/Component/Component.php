@@ -48,6 +48,13 @@ class Component extends Model {
  const DEFAULT_PICTURE_URL = 'default.png';
 
  /**
+  * The default value for a component limit
+  *
+  * var int
+  */
+ const COMPONENT_LIMIT = 30;
+
+ /**
   * The database table used by the model gb_component.
   *
   * @var string
@@ -121,10 +128,10 @@ class Component extends Model {
   */
  public static function getComponents($animal, $page) {
 
-  $offset = $page * Component::$COMPONENT_LIMIT;
+  $offset = $page * Component::COMPONENT_LIMIT;
   $components = Component::orderBy('order', 'desc')
           ->where('type_id', $animal)
-          ->take(Component::$COMPONENT_LIMIT)
+          ->take(Component::COMPONENT_LIMIT)
           ->offset($offset)
           ->get();
 

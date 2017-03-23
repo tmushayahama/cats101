@@ -14,8 +14,9 @@
   $translatePartialLoaderProvider.addPart('src/app/main/apps/components');
 
   // Api
-  msApiProvider.register('components.componentByLocation', ['/api/components/component/x/:x/y/:y',
+  msApiProvider.register('components.componentByLocation', ['/api/components/component/animal/:animal/x/:x/y/:y',
    {
+    animal: "@animal",
     x: "@x",
     y: '@y'
    }]);

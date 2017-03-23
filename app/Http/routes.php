@@ -25,5 +25,6 @@ Route::group(['prefix' => 'api'], function() {
  Route::get('authenticate/user', 'AuthenticateController@getAuthenticatedUser');
 
  //Component
- Route::get('components/component/x/{x}/y/{y}', 'Component\ComponentController@getComponentByLocation');
+ Route::get('components/animal/{animal}/page/{page}', 'Component\ComponentController@getComponents');
+ Route::get('components/component/animal/{animal}', 'Component\ComponentController@getComponentByLocation');
 });

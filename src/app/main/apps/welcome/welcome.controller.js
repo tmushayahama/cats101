@@ -17,20 +17,32 @@
 
   //Method
   vm.getComponentByLocation = getComponentByLocation;
+  vm.chooseFood = chooseFood;
 
   init();
 
   function init() {
-   ComponentService.getComponentByLocation(0, 0).then(function (data) {
+   ComponentService.getComponentByLocation(1, 0, 0).then(function (data) {
     vm.component = data;
    });
+   chooseFood(vm.foods.options[0]);
   }
 
   function getComponentByLocation(event) {
-   var x = event.PageX;
-   ComponentService.getComponentByLocation(event.pageX, event.pageY).then(function (data) {
+   var x = event.pageX;
+   var animal = vm.foods.selected.animal;
+   ComponentService.getComponentByLocation(animal, event.pageX, event.pageY).then(function (data) {
     vm.component = data;
+    vm.component.pictureStyle = {
+     'top': event.pageY - vm.component.location_y,
+     'left': event.pageX - vm.component.location_x
+    }
    });
   }
+
+  function chooseFood(food) {
+   vm.foods.selected = food;
+  }
+
  }
 })();

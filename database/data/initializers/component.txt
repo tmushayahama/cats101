@@ -1,5 +1,36 @@
-id	type_id	title	description	location_x	location_y	due	creator_id	component_picture_url	created_at	updated_at	privacy_id	order	status
-1	1	cute 1	cutee	12	12		1	ct-1-1-1-1-sm.jpg			0	0	0
-2	1	cute 2	cutee	12	12		1	ct-1-1-1-2-sm.jpg			0	0	0
-3	1	cute 3	cutee	12	12		1	ct-1-1-1-3-sm.jpg			0	0	0
-4	1	cute 4	cutee	12	12		1	ct-1-1-1-4-sm.jpg			0	0	0
+id	type_id	title	description	location_x	location_y	due	creator_id	component_picture_url	created_at	updated_at	privacy_id	order	status	
+1	1	cute 1	cutee	12	12		1	cat/cat-1-1-1-1-sm.png			0	0	0	
+2	1	cute 2	cutee	12	12		1	cat/cat-1-1-1-2-sm.png			0	0	0	
+3	1	cute 3	cutee	12	12		1	cat/cat-1-1-1-3-sm.png			0	0	0	
+4	1	cute 4	cutee	12	12		1	cat/cat-1-1-1-4-sm.png			0	0	0	
+5	1	cute 5	cutee	12	12		1	cat/cat-1-1-1-5-sm.png			0	0	0	
+6	1	cute 6	cutee	12	12		1	cat/cat-1-1-1-6-sm.png			0	0	0	
+7	1	cute 7	cutee	12	12		1	cat/cat-1-1-1-7-sm.png			0	0	0	
+8	1	cute 8	cutee	12	12		1	cat/cat-1-1-1-8-sm.png			0	0	0	
+9	1	cute 1	cutee	12	12		1	cat/cat-1-1-1-9-sm.png			0	0	0	"photo credit: Mrs eNil <a href=""http://www.flickr.com/photos/8796598@N06/976841331"">I'm not fat.....</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-nd/2.0/"">(license)</a>"
+10	1	cute 2	cutee	12	12		1	cat/cat-1-1-1-10-sm.png			0	0	0	"photo credit: wbaiv <a href=""http://www.flickr.com/photos/9998127@N06/32601829364"">kitten Angel DSC_0711</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-sa/2.0/"">(license)</a>"
+11	1	cute 3	cutee	12	12		1	cat/cat-1-1-1-11-sm.png			0	0	0	"photo credit: ongushi <a href=""http://www.flickr.com/photos/8827284@N06/31137017254"">CAT 182: Attack!!!</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-nd/2.0/"">(license)</a>"
+12	1	cute 4	cutee	12	12		1	cat/cat-1-1-1-12-sm.png			0	0	0	"photo credit: cseeman <a href=""http://www.flickr.com/photos/7702423@N04/32256164295"">Cats and Kittens at Crafty Cat Rescue (Ann Arbor, Michigan) - Wednesday January 11, 2017</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-sa/2.0/"">(license)</a>"
+13	1	cute 5	cutee	12	12		1	cat/cat-1-1-1-13-sm.png			0	0	0	"photo credit: pecooper98362 <a href=""http://www.flickr.com/photos/29261037@N02/31734507721"">Wha-a-a-at?</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc/2.0/"">(license)</a>"
+14	2	cute 9	cutee	12	12		1	dog/dog-1-1-1-1-sm.png			0	0	0	
+15	2	cute 10	cutee	12	12		1	dog/dog-1-1-1-2-sm.png			0	0	0	
+16	2	cute 11	cutee	12	12		1	dog/dog-1-1-1-3-sm.png			0	0	0	
+17	2	cute 12	cutee	12	12		1	dog/dog-1-1-1-4-sm.png			0	0	0	
+18	3	cute 13	cutee	12	12		1	chicken/chicken-1-1-1-1-sm.png			0	0	0	
+19	3	cute 14	cutee	12	12		1	chicken/chicken-1-1-1-2-sm.png			0	0	0	
+20	3	cute 15	cutee	12	12		1	chicken/chicken-1-1-1-3-sm.png			0	0	0	
+21	3	cute 16	cutee	12	12		1	chicken/chicken-1-1-1-4-sm.png			0	0	0	
+22	3	cute 17	cutee	12	12		1	chicken/chicken-1-1-1-5-sm.png			0	0	0	
+23	4	cute 18	cutee	12	12		1	cow/cow-1-1-1-1-sm.png			0	0	0	
+24	4	cute 19	cutee	12	12		1	cow/cow-1-1-1-2-sm.png			0	0	0	
+25	4	cute 20	cutee	12	12		1	cow/cow-1-1-1-3-sm.png			0	0	0	
+26	4	cute 21	cutee	12	12		1	cow/cow-1-1-1-4-sm.png			0	0	0	
+27	4	cute 22	cutee	12	12		1	cow/cow-1-1-1-5-sm.png			0	0	0	
+28	4	cute 23	cutee	12	12		1	cow/cow-1-1-1-6-sm.png			0	0	0	
+29	4	cute 24	cutee	12	12		1	cow/cow-1-1-1-7-sm.png			0	0	0	
+														"photo credit: cseeman <a href=""http://www.flickr.com/photos/7702423@N04/30687162003"">179/365/3101 (December 7, 2016) - Cats and Kittens at Crafty Cat Rescue (Ann Arbor, Michigan) - Wednesday December 7, 2016</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-sa/2.0/"">(license)</a>"
+														"photo credit: cseeman <a href=""http://www.flickr.com/photos/7702423@N04/31880162570"">Cats and Kittens at Crafty Cat Rescue (Ann Arbor, Michigan) - Wednesday January 11, 2017</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-sa/2.0/"">(license)</a>"
+														"photo credit: Malingering <a href=""http://www.flickr.com/photos/68845396@N00/334722072"">Zumi and her invisible pogo stick</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-nd/2.0/"">(license)</a>"
+														"photo credit: brennan.browne <a href=""http://www.flickr.com/photos/113334314@N07/13053802964"">Jakarta, Indonesia</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-sa/2.0/"">(license)</a>"
+														"photo credit: ongushi <a href=""http://www.flickr.com/photos/8827284@N06/31058387481"">CAT 171: Ho Ho Ho!!</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-nd/2.0/"">(license)</a>"
+														"photo credit: cseeman <a href=""http://www.flickr.com/photos/7702423@N04/30472618002"">137/365/3059 (October 26, 2016) - Cats and Kittens at Crafty Cat Rescue (Ann Arbor, Michigan) - Wednesday October 26, 2016</a> via <a href=""http://photopin.com"">photopin</a> <a href=""https://creativecommons.org/licenses/by-nc-sa/2.0/"">(license)</a>"

@@ -96,20 +96,39 @@ class Component extends Model {
   *
   * @return found component
   */
- public static function getComponentByLocation($x, $y) {
+ public static function getComponentByLocation($animal) {
   $howMany = 1;
   $query = Component::orderBy('order', 'desc')
-          //->where('location_x', $x)
-          //->where('location_y', $y)
+          ->where('type_id', $animal)
           //->with('creator')
           //->with('type')
-          ->take(20)
+          ->take(50)
           ->get();
 
   $component = (new Collection($query))
           ->random($howMany);
 
   return $component;
+ }
+
+ /**
+  * Get component by location of x and y
+  *
+  * @param $x the x coordinates of a the component
+  * @param $y the y coordinates of a the component
+  *
+  * @return found component
+  */
+ public static function getComponents($animal, $page) {
+
+  $offset = $page * Component::$COMPONENT_LIMIT;
+  $components = Component::orderBy('order', 'desc')
+          ->where('type_id', $animal)
+          ->take(Component::$COMPONENT_LIMIT)
+          ->offset($offset)
+          ->get();
+
+  return $components;
  }
 
  /**

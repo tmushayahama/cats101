@@ -31,8 +31,21 @@ class ComponentController extends Controller {
   *
   * @return found component
   */
- public function getComponentByLocation($x, $y) {
-  $component = Component::getComponentByLocation($x, $y);
+ public function getComponents($animal, $page) {
+  $components = Component::getComponents($animal, $page);
+  return \Response::json($components);
+ }
+
+ /**
+  * Get component by location of x and y
+  *
+  * @param $x the x coordinates of a the component
+  * @param $y the y coordinates of a the component
+  *
+  * @return found component
+  */
+ public function getComponentByLocation($animal, $x, $y) {
+  $component = Component::getComponentByLocation($animal, $x, $y);
   return \Response::json($component);
  }
 

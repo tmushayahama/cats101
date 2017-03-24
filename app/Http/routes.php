@@ -27,4 +27,5 @@ Route::group(['prefix' => 'api'], function() {
  //Component
  Route::get('components/animal/{animal}/page/{page}', 'Component\ComponentController@getComponents');
  Route::get('components/component/animal/{animal}', 'Component\ComponentController@getComponentByLocation');
+ Route::post('components/component/{id}/calibrate', 'Component\ComponentController@calibrateComponent');
 });

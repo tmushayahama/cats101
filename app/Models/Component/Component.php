@@ -103,17 +103,19 @@ class Component extends Model {
   *
   * @return found component
   */
- public static function saveComponentLocation($componentId) {
+ public static function calibrateComponent($componentId) {
   $user = JWTAuth::parseToken()->toUser();
   $userId = $user->id;
 
   if ($userId) {
    $locationX = Request::get("locationX");
    $locationY = Request::get("locationY");
+   $ratio = Request::get("ratio");
 
    $component = Component::find($componentId);
-   $component->locationX = $locationX;
-   $component->locationY = $locationY;
+   $component->location_x = $locationX;
+   $component->location_y = $locationY;
+   $component->ratio = $ratio;
 
    DB::beginTransaction();
    try {

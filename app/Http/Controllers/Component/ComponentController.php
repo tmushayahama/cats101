@@ -44,8 +44,8 @@ class ComponentController extends Controller {
   *
   * @return found component
   */
- public function saveComponentLocation($id) {
-  $component = Component::saveComponentLocation($id);
+ public function calibrateComponent($id) {
+  $component = Component::calibrateComponent($id);
   return \Response::json($component);
  }
 

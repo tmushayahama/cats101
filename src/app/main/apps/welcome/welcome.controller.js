@@ -36,15 +36,20 @@
 
   }
 
+
   function getComponent(event) {
    var x = event.pageX;
    var animal = vm.foods.selected.animal;
 
    ComponentService.getComponent(animal).then(function (data) {
     vm.component = data;
+    var w = 200;
+    var h = w / (vm.component.ratio / 100);
+    var left = w * (vm.component.location_x / 100);
+    var top = h * (vm.component.location_y / 100);
     vm.component.pictureStyle = {
-     'top': event.pageY - vm.component.location_y,
-     'left': event.pageX - vm.component.location_x
+     'top': event.offsetY - top,
+     'left': event.offsetX - left
     }
    });
   }

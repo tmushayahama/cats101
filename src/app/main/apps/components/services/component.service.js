@@ -164,11 +164,12 @@
    *
    * @returns promise of the deferred response
    */
-  function calibrateComponent(componentData) {
+  function calibrateComponent(calibrateData) {
    // Create a new deferred object
    var deferred = $q.defer();
 
-   msApi.request('components.component.calibrate@save', componentData,
+   msApi.request('components.component.calibrate@save',
+           calibrateData,
            function (response) {
             deferredHandler(response, deferred);
            },

@@ -16,16 +16,16 @@
    url: '/component',
    views: {
     'content@app': {
-     templateUrl: 'src/app/main/apps/components/component.html',
-     controller: 'ComponentController as componentCtrl'
+     templateUrl: 'src/app/main/apps/components/components.html',
+     controller: 'ComponentsController as componentsCtrl'
     }
    }
   }).state('app.component.calibrate', {
    url: '/calibrate',
    views: {
     'component': {
-     templateUrl: 'src/app/main/apps/components/component.html',
-     controller: 'ComponentController as componentCtrl'
+     templateUrl: 'src/app/main/apps/components/views/calibrate.html',
+     controller: 'ComponentCalibrateController as calibrateCtrl'
     }
    }
   });
@@ -39,8 +39,10 @@
     animal: "@animal",
     page: "@page"
    }]);
-  msApiProvider.register('components.component.calibrate', ['/api/components/component/calibrate',
-   {}]);
+  msApiProvider.register('components.component.calibrate', ['/api/components/component/:componentId/calibrate',
+   {
+    "componentId": "@id"
+   }]);
  }
 
 })();

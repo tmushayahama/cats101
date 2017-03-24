@@ -16,9 +16,21 @@ $color-6: #077568;
  height:  100%;
  img {
   @include position(absolute, 50px null null 100px);
-  //height: 100%;
-  // width: auto;
-  //border: #CCC soild 1px;
+  width: 200px;
+  height: auto;
+  border: #15f solid 2px;
+  //background-color: rgba(material-color('blue-grey', '900'), 0.4);
+ }
+}
+
+.gb-cat-holder-calibrate {
+ width: 100%;
+ img {
+  @include position(absolute, 200px null null 50%);
+  transform:translateX(-50%);
+  width: 400px;
+  height: auto;
+  outline: material-color('lime', '700') solid 5px;
   //background-color: rgba(material-color('blue-grey', '900'), 0.4);
  }
 }
@@ -82,6 +94,9 @@ $color-6: #077568;
 .gb-welcome-section-4,
 .gb-welcome-section-5,
 .gb-welcome-section-6 {
+ height: 100%;
+ min-height: 100%;
+ max-height: 100%;
  background-color: #ECEFF1;
  position: relative;
  padding: 0;
@@ -181,17 +196,8 @@ $color-6: #077568;
 }
 
 .gb-welcome-section-4 {
- background: url(../../../src/assets/images/backgrounds/grass-2.jpg);
- height: 100%;
- min-height: 100%;
- max-height: 100%;
+ //background: url(../../../src/assets/images/backgrounds/grass-2.jpg);
 
-
- .gb-door {
-  border: material-color('blue-grey', '600') solid 2px;
-  border-left: material-color('blue-grey', '600') solid 6px;
-  border-bottom: #ECEFF1 solid 10px;
- }
 }
 
 .gb-welcome-section-5 {

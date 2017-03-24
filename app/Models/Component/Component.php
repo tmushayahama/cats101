@@ -172,8 +172,9 @@ class Component extends Model {
           ->get();
 
   $result = array();
-  $result[$animalName->title]["list"] = $components;
-  $result[$animalName->title]["page"] = $page;
+  $result['type'] = $animalName->title;
+  $result["components"] = $components;
+  $result["page"] = $page;
 
   return $result;
  }

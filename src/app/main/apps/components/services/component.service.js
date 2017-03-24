@@ -15,25 +15,37 @@
      {
       'name': 'mouse',
       'picture_url': 'mouse.png',
-      'animal': 2,
+      'animal': {
+       "id": 2,
+       "name": "cat"
+      },
       'total': 10
      },
      {
       'name': 'treat',
       'picture_url': 'treat.png',
-      'animal': 3,
+      'animal': {
+       "id": 3,
+       "name": "dog"
+      },
       'total': 10
      },
      {
       'name': 'worm',
       'picture_url': 'worm.png',
-      'animal': 4,
+      'animal': {
+       "id": 4,
+       "name": "chicken"
+      },
       'total': 10
      },
      {
       'name': 'grass',
       'picture_url': 'grass.png',
-      'animal': 5,
+      'animal': {
+       "id": 5,
+       "name": "cow"
+      },
       'total': 10
      }
     ]
@@ -80,15 +92,19 @@
 
    msApi.request('components.components@get',
            {
-            animal: animal,
+            animal: animal.id,
             page: page
            },
            function (response) {
-            if (service.components[response.type.name]) {
-             service.components[response.type.name].push(response);
-            } else {
-             service.components[response.type.name] = response;
+            if (!service.components[response.type]) {
+             service.components[response.type] = {};
             }
+            if (service.components[response.type].animals) {
+             service.components[response.type].animals.push(response.components);
+            } else {
+             service.components[response.type].animals = response.components;
+            }
+            service.components[response.type].page = response.page;
             deferredHandler(response, deferred);
            },
            function (response) {
@@ -134,7 +150,8 @@
   function getComponent(animal) {
    // Create a new deferred object
    var deferred = $q.defer();
-   var animals = _.filter(service.components, {'type_id': animal});
+
+   var animals = _.filter(service.components[animal.name].animals, {'type_id': animal.id});
    var result = _.sample(animals);
 
    deferredHandler(result, deferred);

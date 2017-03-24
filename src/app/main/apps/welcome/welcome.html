@@ -9,6 +9,7 @@
    <div class="p-8" ng-repeat="food in vm.foods.options" layout-fill>
     <div class="ct-widget-food-item"
          layout="column" layout-align="center center"
+         ng-class="{'active': vm.foods.selected.animal === food.animal}"
          ng-click="vm.chooseFood(food); $event.stopPropagation()" flex="25">
      <img ng-src="src/assets/images/food/{{food.picture_url}}" alt="">
     </div>

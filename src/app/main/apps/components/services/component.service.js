@@ -9,37 +9,39 @@
  /** @ngInject */
  function ComponentService(_, msApi, $q) {
   var service = {
-   components: [],
+   components: {},
    foods: {
     options: [
      {
       'name': 'mouse',
       'picture_url': 'mouse.png',
-      'animal': 1,
+      'animal': 2,
       'total': 10
      },
      {
       'name': 'treat',
       'picture_url': 'treat.png',
-      'animal': 2,
+      'animal': 3,
       'total': 10
      },
      {
       'name': 'worm',
       'picture_url': 'worm.png',
-      'animal': 3,
+      'animal': 4,
       'total': 10
      },
      {
       'name': 'grass',
       'picture_url': 'grass.png',
-      'animal': 4,
+      'animal': 5,
       'total': 10
      }
     ]
    },
+   //Methods
    getComponent: getComponent,
-   getComponents: getComponents
+   getComponents: getComponents,
+   calibrateComponent: calibrateComponent
   };
 
 
@@ -76,13 +78,17 @@
    // Create a new deferred object
    var deferred = $q.defer();
 
-   msApi.request('components.components@query',
+   msApi.request('components.components@get',
            {
             animal: animal,
             page: page
            },
            function (response) {
-            service.components = response;
+            if (service.components[response.type.name]) {
+             service.components[response.type.name].push(response);
+            } else {
+             service.components[response.type.name] = response;
+            }
             deferredHandler(response, deferred);
            },
            function (response) {
@@ -132,6 +138,27 @@
    var result = _.sample(animals);
 
    deferredHandler(result, deferred);
+
+   return deferred.promise;
+  }
+
+  /**
+   * Get component data from the server
+   *
+   * @returns promise of the deferred response
+   */
+  function calibrateComponent(componentData) {
+   // Create a new deferred object
+   var deferred = $q.defer();
+
+   msApi.request('components.component.calibrate@save', componentData,
+           function (response) {
+            deferredHandler(response, deferred);
+           },
+           function (response) {
+            deferred.reject(response);
+           }
+   );
 
    return deferred.promise;
   }

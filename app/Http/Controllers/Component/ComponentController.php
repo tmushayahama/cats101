@@ -44,8 +44,8 @@ class ComponentController extends Controller {
   *
   * @return found component
   */
- public function getComponentByLocation($animal, $x, $y) {
-  $component = Component::getComponentByLocation($animal, $x, $y);
+ public function saveComponentLocation($id) {
+  $component = Component::saveComponentLocation($id);
   return \Response::json($component);
  }
 

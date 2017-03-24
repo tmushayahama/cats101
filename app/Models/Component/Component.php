@@ -103,6 +103,41 @@ class Component extends Model {
   *
   * @return found component
   */
+ public static function saveComponentLocation($componentId) {
+  $user = JWTAuth::parseToken()->toUser();
+  $userId = $user->id;
+
+  if ($userId) {
+   $locationX = Request::get("locationX");
+   $locationY = Request::get("locationY");
+
+   $component = Component::find($componentId);
+   $component->locationX = $locationX;
+   $component->locationY = $locationY;
+
+   DB::beginTransaction();
+   try {
+    $component->save();
+   } catch (\Exception $e) {
+    //failed logic here
+    DB::rollback();
+    throw $e;
+   }
+   DB::commit();
+   return $component;
+  } else {
+   return [];
+  }
+ }
+
+ /**
+  * Get component by location of x and y
+  *
+  * @param $x the x coordinates of a the component
+  * @param $y the y coordinates of a the component
+  *
+  * @return found component
+  */
  public static function getComponentByLocation($animal) {
   $howMany = 1;
   $query = Component::orderBy('order', 'desc')
@@ -127,15 +162,20 @@ class Component extends Model {
   * @return found component
   */
  public static function getComponents($animal, $page) {
-
+  $animalName = Level::getLevel($animal);
   $offset = $page * Component::COMPONENT_LIMIT;
   $components = Component::orderBy('order', 'desc')
           ->where('type_id', $animal)
+          ->with('type')
           ->take(Component::COMPONENT_LIMIT)
           ->offset($offset)
           ->get();
 
-  return $components;
+  $result = array();
+  $result[$animalName->title]["list"] = $components;
+  $result[$animalName->title]["page"] = $page;
+
+  return $result;
  }
 
  /**

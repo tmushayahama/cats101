@@ -24,4 +24,9 @@ class Level extends Model {
   */
  protected $fillable = ['title', 'description', 'level_id'];
 
+ public static function getLevel($id) {
+  $level = Level::find($id);
+  return $level;
+ }
+
 }

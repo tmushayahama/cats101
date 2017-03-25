@@ -69,6 +69,7 @@ CREATE TABLE `ct_component` (
   `ratio` int(11) NOT NULL DEFAULT 1,
   `due` datetime,
   `creator_id` int(11) NOT NULL,
+  `background_class` varchar(50) DEFAULT '',
   `component_picture_url` varchar(1000) NOT NULL DEFAULT "",
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -150,7 +151,7 @@ load data local infile 'C:/xampp/htdocs/cats101/database/data/initializers/compo
     escaped by '\\'
     lines terminated by '\r\n'
     ignore 1 LINES
- (`id`,	`type_id`,	`title`,	`description`,	`location_x`,	`location_y`,	`ratio`, `due`,	`creator_id`,	`component_picture_url`,	`created_at`,	`updated_at`,	`privacy_id`,	`order`,	`status`);
+ (`id`,	`type_id`,	`title`,	`description`,	`location_x`,	`location_y`,	`ratio`, `due`,	`creator_id`,	`background_class`, `component_picture_url`,	`created_at`,	`updated_at`,	`privacy_id`,	`order`,	`status`);
 
 
 -- ------------------ USER ------------------

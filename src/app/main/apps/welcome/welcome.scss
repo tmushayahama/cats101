@@ -12,13 +12,38 @@ $color-4: #9A6D36;
 $color-5: #41642A;
 $color-6: #077568;
 
+.ct-grass {
+ background: url(../../../src/assets/images/backgrounds/grass-1.jpg);
+ background-size: auto 100%;
+ height: 100%;
+ min-height: 100%;
+ max-height: 100%;
+ background-color: #ECEFF1;
+ position: relative;
+ padding: 0;
+ overflow: hidden;
+ &.ct-grass-1 {
+  background-image: url(../../../src/assets/images/backgrounds/grass-1.jpg);
+ }
+ &.ct-grass-2 {
+  background-image: url(../../../src/assets/images/backgrounds/grass-2.jpg);
+ }
+ &.ct-grass-3 {
+  background-image: url(../../../src/assets/images/backgrounds/grass-3.jpg);
+ }
+ &.ct-grass-4 {
+  background-image: url(../../../src/assets/images/backgrounds/grass-4.jpg);
+ }
+}
+
 .gb-cat-holder {
  height:  100%;
  img {
   @include position(absolute, 50px null null 100px);
-  width: 200px;
+  width: 300px;
   height: auto;
-  border: #15f solid 2px;
+  pointer-events: none;
+  // border: #15f solid 2px;
   //background-color: rgba(material-color('blue-grey', '900'), 0.4);
  }
 }
@@ -196,7 +221,7 @@ $color-6: #077568;
 }
 
 .gb-welcome-section-4 {
- //background: url(../../../src/assets/images/backgrounds/grass-2.jpg);
+ background: url(../../../src/assets/images/backgrounds/grass-2.jpg);
 
 }
 

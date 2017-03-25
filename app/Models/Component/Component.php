@@ -16,26 +16,8 @@ use JWTAuth;
  * Follwing is list of components derived from Component. They have shared properties This has helped
  * to reduce the number database tables and simplified it.
  *
- * - Note
- * - Guideline
- * - Activity
- * - Step
- * - Question
- * - Checklist Item
- * - Weblink Item
- * - Todo Item
- * - Skill
- * - Goals
- * - Hobby
- * - Promise
- * - Mentorship
- * - Collaboration
- * - Teach
- * - Advice
- * - Group
- * - Journal
- * - Page
- * - Project
+ * - Cat
+ * 
  *
  */
 class Component extends Model {

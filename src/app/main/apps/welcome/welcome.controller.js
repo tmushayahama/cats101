@@ -33,9 +33,7 @@
   function getComponents(animal, page) {
    ComponentService.getComponents(animal, page).then(function (data) {
    });
-
   }
-
 
   function getComponent(event) {
    var x = event.pageX;
@@ -43,7 +41,7 @@
 
    ComponentService.getComponent(animal).then(function (data) {
     vm.component = data;
-    var w = 200;
+    var w = 300;
     var h = w / (vm.component.ratio / 100);
     var left = w * (vm.component.location_x / 100);
     var top = h * (vm.component.location_y / 100);
@@ -51,6 +49,7 @@
      'top': event.offsetY - top,
      'left': event.offsetX - left
     }
+    vm.foods.selected.total--;
    });
   }
 
